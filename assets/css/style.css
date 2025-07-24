@@ -1355,7 +1355,7 @@ z-index: 2;
   color: #fff;
 }
 .form-box .f-group input::placeholder, .form-box .f-group textarea::placeholder{
-  color: #fff;
+  color: #000;
 }
 .contact-box{
   margin-top: 0;
