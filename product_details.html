@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/slick.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@200;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Jha Projectors</title>
+    <style>
+  
+      .product-details-gallery {
+        position: relative;
+      }
+
+      .product-details-main-image {
+        width: 100%;
+        height: 400px;
+        border-radius: 15px;
+        object-fit: cover;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+      }
+
+      .product-details-main-image:hover {
+        transform: scale(1.02);
+      }
+
+      .product-details-thumbnails {
+        display: flex;
+        gap: 10px;
+        margin-top: 15px;
+        justify-content: center;
+      }
+
+      .product-details-thumbnail {
+        width: 70px;
+        height: 70px;
+        border-radius: 8px;
+        object-fit: cover;
+        cursor: pointer;
+        border: 3px solid transparent;
+        transition: all 0.3s ease;
+      }
+
+      .product-details-thumbnail:hover,
+      .product-details-thumbnail.active {
+        border-color: #667eea;
+        transform: scale(1.1);
+      }
+
+      .product-details-info {
+        /* background: rgba(255, 255, 255, 0.95); */
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        /* padding: 30px; */
+        /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); */
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .product-details-title {
+        font-size: 2.2em;
+        color: #a3cc39;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      .product-details-rating {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .product-details-stars {
+        color: #ffd700;
+        font-size: 1.2em;
+      }
+
+    
+
+
+
+      .product-details-availability {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .product-details-status {
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 0.9em;
+      }
+
+      .product-details-available {
+        background: #d4edda;
+        color: #155724;
+      }
+
+ 
+
+  
+    </style>
+  </head>
+  <body>
+    <!-- ----Header-Section-Start---- -->
+
+    <header>
+      <div class="top-bar">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-md-8">
+              <div class="top-left-bar">
+                <div class="email">
+                  <i class="fa-solid fa-envelope"></i>
+                  <a href="mailto:Stage@jhaprojector.com "
+                    >Stage@jhaprojector.com
+                  </a>
+                </div>
+                <div class="email phone">
+                  <i class="fa-solid fa-phone"></i>
+                  <a href="tel:+91 9891478591">+91 9891478591</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="top-right-bar">
+                <ul>
+                  <li>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="logo-bar">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-3">
+              <div class="logo">
+                <img src="assets/images/logo.png" alt="" />
+              </div>
+            </div>
+            <div class="col-lg-9">
+              <div class="row align-items-center">
+                <div class="col-lg-3">
+                  <div class="phone">
+                    <div class="icon">
+                      <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="text">
+                      <span><b>Mobile Number:</b></span
+                      ><br />
+                      <a href="tel:+91 9891478591">+91 9891478591</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-5">
+                  <div class="address">
+                    <div class="icon">
+                      <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="text">
+                      <span><b>Email Id :</b></span>
+                      <a href="mailto:Stage@jhaprojector.com "
+                        >Stage@jhaprojector.com
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html"
+                ><img src="assets/images/logo.png" alt=""
+              /></a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.html"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="rentalDropdown"
+                      role="button"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      Rental Services
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="rentalDropdown">
+                      <a class="dropdown-item" href="desktop.html">Desktop</a>
+                      <a class="dropdown-item" href="desktop.html">Laptop</a>
+                      <a class="dropdown-item" href="desktop.html">Printers</a>
+                    </div>
+                  </li>
+
+                
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                </ul>
+                <div class="book">
+                  <a href="contact.html" class="sec-btn">Book Now</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- ----Header-Section-End---- -->
+
+    <!-- ----Banner-Section-Start---- -->
+
+    <section class="banner-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="banner-title">
+              <h2>Desktop</h2>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">||</a></li>
+                <li><a href="#">Desktop</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----Banner-Section-End---- -->
+     <!-- ----Product-Section-Start---- -->
+       <div class="container-fluid product-details">
+        <div class="row g-4">
+            <div class="col-lg-6">
+ <!-- Image Gallery -->
+        <div class="product-details-gallery">
+          <img
+            src="assets/images/Desktop.png"
+            alt="Dell Desktop"
+            class="product-details-main-image"
+            id="mainImage"
+          />
+          <div class="product-details-thumbnails">
+            <img
+              src="assets/images/Desktop.png"
+              class="product-details-thumbnail active"
+              onclick="changeImage(this.src)"
+            />
+            <img
+              src="assets/images/Desktop-2.png"
+              class="product-details-thumbnail"
+              onclick="changeImage(this.src)"
+            />
+            <img
+              src="assets/images/desktop-3.png"
+              class="product-details-thumbnail"
+              onclick="changeImage(this.src)"
+            />
+            <img
+              src="assets/images/system.png"
+              class="product-details-thumbnail"
+              onclick="changeImage(this.src)"
+            />
+          </div>
+        </div>
+            </div>
+            <div class="col-lg-6">
+  <!-- Product Info -->
+        <div class="product-details-info">
+          <h1 class="product-details-title">Inspiron 3020 Desktop</h1>
+
+          <div class="product-details-rating">
+            <div class="product-details-stars">★★★★☆</div>
+            <span class="text-dark">(4.2/5 - 125 reviews)</span>
+          </div>
+
+          <div class="product-details-availability">
+            <span class="product-details-status product-details-available"
+              >✓ Available</span
+            >
+          </div>
+
+          <p
+            class="mt-4"
+            style="color: #7f8c8d; font-size: 0.9em; line-height: 1.6"
+          >
+            Experience superior performance with our High Configuration Desktop
+            System, designed for professionals who demand reliability and speed.
+            Powered by a 12th Gen Intel i7 processor, 32GB RAM, and a
+            lightning-fast 1TB SSD, this desktop easily handles development,
+            design, and data-intensive tasks. The Nvidia RTX 3060 graphics card
+            ensures seamless visuals for creative or analytical work. Perfect
+            for remote teams, startups, or anyone needing a workstation
+            temporarily, it offers flexibility with monthly rental plans. Enjoy
+            free delivery, easy setup, and 24/7 support. Rent this desktop to
+            maximize productivity without the burden of ownership.
+          </p>
+          <div class="product-details-actions">
+            <a href="tel:+91 9891478591" class="sec-btn">Book Now</a>
+          </div>
+        </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+           <div class="">
+            <Lorem>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas libero culpa doloremque. Exercitationem eligendi quasi animi, enim eius voluptatum tenetur rem magnam beatae sint, dolores cum. Commodi, magnam laudantium dolorem laboriosam fugit quo nihil. Reiciendis numquam nihil deleniti consequuntur recusandae optio mollitia qui voluptates! Pariatur architecto sunt repellendus quis corrupti.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas libero culpa doloremque. Exercitationem eligendi quasi animi, enim eius voluptatum tenetur rem magnam beatae sint, dolores cum. Commodi, magnam laudantium dolorem laboriosam fugit quo nihil. Reiciendis numquam nihil deleniti consequuntur recusandae optio mollitia qui voluptates! Pariatur architecto sunt repellendus quis corrupti.</p>
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas libero culpa doloremque. Exercitationem eligendi quasi animi, enim eius voluptatum tenetur rem magnam beatae sint, dolores cum. Commodi, magnam laudantium dolorem laboriosam fugit quo nihil. Reiciendis numquam nihil deleniti consequuntur recusandae optio mollitia qui voluptates! Pariatur architecto sunt repellendus quis corrupti.</p>
+<ul>
+    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, rem!</li>
+    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, rem!</li>
+    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, rem!</li>
+    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, rem!</li>
+    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, rem!</li>
+</ul>
+        </div>  
+        </div>
+    </div>
+      <!-- ----Product-Section-End---- -->
+   
+    <!-- ----Choose-Section-Start---- -->
+
+    <section class="choose-section">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-lg-12">
+            <div class="choose">
+              <div class="ch-head">
+                <span class="topic"><b>OUR SERVICE SPECTRUM</b></span>
+                <h2>Why IT Renting From Us Is Beneficial?</h2>
+              </div>
+              <div id="counter">
+             <div class="row justify-content-center">
+  <div class="col-lg-4 col-6 g-0">
+    <div class="count-box">
+      <div class="icon">
+        <!-- 24x7 Service: Clock icon -->
+        <i class="fas fa-clock fs-1"></i>
+        <p>24X7 Service</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-6 g-0">
+    <div class="count-box">
+      <div class="icon">
+        <!-- Quick Support: Headset icon -->
+        <i class="fas fa-headset fs-1"></i>
+        <p>Quick Support</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-6 g-0">
+    <div class="count-box">
+      <div class="icon">
+        <!-- Easy & Free Upgrades: Arrow-circle-up icon -->
+        <i class="fas fa-arrow-circle-up fs-1"></i>
+        <p>Easy & Free Upgrades</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-6 g-0">
+    <div class="count-box">
+      <div class="icon">
+        <!-- No-Hassle Maintenance: Tools icon -->
+        <i class="fas fa-tools fs-1"></i>
+        <p>No-Hassle Maintenance</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-6 g-0">
+    <div class="count-box">
+      <div class="icon">
+        <!-- Zero-Cost Repairs: Wrench icon -->
+        <i class="fas fa-wrench fs-1"></i>
+        <p>Zero-Cost Repairs</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-6 g-0">
+    <div class="count-box">
+      <div class="icon">
+        <!-- No Capital Investment: Wallet icon -->
+        <i class="fas fa-wallet fs-1"></i>
+        <p>No Capital Investment</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----Choose-Section-End---- -->
+     <!-- ===Brand-Section-Start=== -->
+
+<section class="brand-section p-100">
+    <div class="container">
+        <h3>Our Partner</h3>
+        <div class="brand-slider">
+            <div class="brand-box">
+                <img src="assets/images/clients1.gif" alt="">
+            </div>
+            <div class="brand-box">
+                <img src="assets/images/clients4.gif" alt="">
+            </div>
+            <div class="brand-box">
+                <img src="assets/images/clients6.gif" alt="">
+              </div>
+             <div class="brand-box">
+                  <img src="assets/images/clients9.gif" alt="">
+             </div>
+            <div class="brand-box">
+                <img src="assets/images/clients10.gif" alt="">
+            </div>
+            <div class="brand-box">
+                <img src="assets/images/clients11.gif" alt="">
+            </div>
+            <div class="brand-box">
+                <img src="assets/images/clients14.gif" alt="">
+            </div>
+            <div class="brand-box">
+                <img src="assets/images/clients18.gif" alt="">
+            </div>
+        </div>
+    </div>
+  </section>
+  
+  <!-- ===Brand-Section-End=== -->
+ 
+  <!-- ----Footer-Section-Start---- -->
+
+    <footer class="footer-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-box">
+              <div class="footer-logo">
+                <img src="assets/images/logo.png" alt="" />
+              </div>
+              <div class="footer-text">
+                <p>
+                  We provide reliable projector, camera, audio, and video equipment rental services across India to make your events seamless, professional, and memorable. Trusted by individuals and businesses alike.
+                </p>
+              </div>
+              <ul class="social">
+                <li>
+                  <a href="#" target="_blank"
+                    ><i class="fa-brands fa-facebook-f"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#" target="_blank"
+                    ><i class="fa-brands fa-instagram"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-box">
+              <div class="footer-title">
+                <h4>Quick Links</h4>
+                <div class="footer-link">
+                  <ul>
+                    <li>
+                      <a href="index.html"> <b>+</b>Home</a>
+                    </li>
+                    <li>
+                      <a href="about.html"> <b>+</b>About-Us</a>
+                    </li>
+                   
+                   
+                    <li>
+                      <a href="contact.html"> <b>+</b>Contact</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-6">
+            <div class="footer-box">
+              <div class="footer-title">
+                <h4>Contacet-Us</h4>
+                <div class="footer-link2">
+                  <ul>
+                    <li>
+                      <i class="fa-solid fa-location-dot"></i
+                      ><span
+                        >Sector 33, Gurugram, Haryana 122005</span
+                      >
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-phone"></i>
+                      <a href="tel:+91 9891478591">+91 9891478591</a>
+                    </li>
+                    <!-- <li>
+                      <i class="fa-solid fa-phone"></i>
+                      <a href="tel:+91 9891478591">+91 9034512045</a>
+                    </li> -->
+                    <li>
+                      <i class="fa-solid fa-envelope"></i
+                      ><a href="mailto:Stage@jhaprojector.com "
+                        >Stage@jhaprojector.com
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copy-right">
+        <p>
+          © Copyright 2025 | Powered by Jha Projectors || Designed
+          By
+          <a href="https://standupstartups.com/"> Standup Startups. </a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- -----Footer-Section-End---- -->
+
+    <!--===Whatsapp-Section-Start===-->
+
+    <div class="what">
+      <a href="https://wa.me/919891478591" target="_blank"
+        ><i class="fa-brands fa-whatsapp"></i
+      ></a>
+      <a href="tel:+91 9891478591">
+        <i class="fa-solid fa-phone"></i>
+      </a>
+    </div>
+
+    <!--===Whatsapp-Section-End===-->
+    <!-- -----Script-Start---- -->
+
+    <script src="assets/js/jquery-3.6.0.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/counter.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/script.js"></script>
+       <script>
+      // Image gallery functionality
+      function changeImage(src) {
+        document.getElementById("mainImage").src = src;
+
+        // Update active thumbnail
+        document
+          .querySelectorAll(".product-details-thumbnail")
+          .forEach((thumb) => {
+            thumb.classList.remove("active");
+          });
+        event.target.classList.add("active");
+      }
+
+      // Rental option selection
+      document
+        .querySelectorAll(".product-details-rental-option")
+        .forEach((option) => {
+          option.addEventListener("click", function () {
+            document
+              .querySelectorAll(".product-details-rental-option")
+              .forEach((opt) => {
+                opt.classList.remove("selected");
+              });
+            this.classList.add("selected");
+
+            // Update price based on selection
+            const price = this.querySelector("div:last-child").textContent;
+            document.querySelector(
+              ".product-details-rental-price"
+            ).textContent = price + "/महीना";
+          });
+        });
+
+      // Add to cart functionality
+      document
+        .querySelector(".product-details-btn-primary")
+        .addEventListener("click", function () {
+          this.innerHTML = "✓ Added to Cart";
+          this.style.background = "#27ae60";
+          setTimeout(() => {
+            this.innerHTML = "🛒 Rent Now";
+            this.style.background = "linear-gradient(45deg, #667eea, #764ba2)";
+          }, 2000);
+        });
+
+      // Wishlist functionality
+      document
+        .querySelector(".product-details-btn-secondary")
+        .addEventListener("click", function () {
+          if (this.innerHTML.includes("❤️")) {
+            this.innerHTML = "💔 Remove from Wishlist";
+            this.style.background = "#e74c3c";
+            this.style.color = "white";
+            this.style.borderColor = "#e74c3c";
+          } else {
+            this.innerHTML = "❤️ Wishlist";
+            this.style.background = "transparent";
+            this.style.color = "#667eea";
+            this.style.borderColor = "#667eea";
+          }
+        });
+
+      // Floating buttons functionality
+      document
+        .querySelectorAll(".product-details-floating-btn")
+        .forEach((btn) => {
+          btn.addEventListener("click", function () {
+            const title = this.getAttribute("title");
+            alert(`${title} feature coming soon!`);
+          });
+        });
+
+      // Smooth scroll for better UX
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+
+      // Add some interactive animations
+      document
+        .querySelectorAll(".product-details-spec-item")
+        .forEach((item) => {
+          item.addEventListener("mouseenter", function () {
+            this.style.background = "#e8f4fd";
+          });
+          item.addEventListener("mouseleave", function () {
+            this.style.background = "#f8f9fa";
+          });
+        });
+    </script>
+  </body>
+</html>
+

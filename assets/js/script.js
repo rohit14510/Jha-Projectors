@@ -100,31 +100,36 @@ $(window).scroll(function() {
         //button
     
   const catButtons = document.querySelectorAll('.cat-btn');
-  const productCards = document.querySelectorAll('.product-card');
+const productCards = document.querySelectorAll('.product-card');
 
-  catButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      // Set active button class
-      catButtons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+// By default, show only the first category products on page load
+window.addEventListener('DOMContentLoaded', () => {
+  const defaultCategory = document.querySelector('.cat-btn.active').getAttribute('data-category');
+  productCards.forEach(card => {
+    if(card.getAttribute('data-category') === defaultCategory) {
+      card.classList.remove('d-none');
+    } else {
+      card.classList.add('d-none');
+    }
+  });
+});
 
-      const selectedCategory = btn.getAttribute('data-category');
-
-      productCards.forEach(card => {
-        // If 'all' category selected, show all cards
-        if (selectedCategory === 'all') {
-          card.classList.remove('d-none');
-        } else {
-          // Show only matching category
-          if (card.getAttribute('data-category') === selectedCategory) {
-            card.classList.remove('d-none');
-          } else {
-            card.classList.add('d-none');
-          }
-        }
-      });
+// Button click logic (same as before)
+catButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    catButtons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const selectedCategory = btn.getAttribute('data-category');
+    productCards.forEach(card => {
+      if(card.getAttribute('data-category') === selectedCategory) {
+        card.classList.remove('d-none');
+      } else {
+        card.classList.add('d-none');
+      }
     });
   });
+});
+
 
 //counter
 

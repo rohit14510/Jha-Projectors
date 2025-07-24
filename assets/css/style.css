@@ -181,7 +181,7 @@ h2 {
 
 .top-bar{
   padding: 10px 0px;
-  background-color: #f9ca7f;
+  background-color: #a3cc39;
   display: none;
 }
 
@@ -352,15 +352,15 @@ h2 {
 }
 
 .slide-1 {
-  background-image: url(../images/banner-1.jpg);
+  background-image: url(../images/banner-3.jpg);
 }
 
 .slide-2 {
-  background-image: url(../images/banner-1.jpg);
+  background-image: url(../images/banner-3.jpg);
 }
 
 .slide-3 {
-  background-image: url(../images/banner-1.jpg);
+  background-image: url(../images/banner-3.jpg);
 }
 
 
@@ -1567,4 +1567,53 @@ h2{
 }
 
 /*---thank-Section-end----*/
+/* ------product-card------ */
+.Product-section{
+    padding: 100px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  background-color: #EEF4ED;
+}
+.Product-Rent-Card {
+  border: 1px solid #e1eeda;
+  border-radius: 16px;
+  box-shadow: 0 1px 8px rgba(168, 168, 168, 0.18);
+  background: #f7fcf3;
+  transition: box-shadow 0.2s;
+}
+.Product-Rent-Card:hover {
+  box-shadow: 0 4px 24px rgba(100, 140, 60, 0.18);
+  border-color: #c9e7b8;
+}
+.Product-Rent-Card .Product-Rent-card-title {
+  color: #95b452;
+  font-weight: 600;
+}
+.Product-Rent-Card .card-img-top {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 7px;
+  background: #e3f2d3;
+}
+.Product-Rent-Card .card-body {
+  padding: 0.5rem 1rem 1rem 1rem;
+}
+.Product-Rent-card-text{
+  color: #000;
+}
 
+.product-details{
+   padding: 100px 30px;
+   background-color: #fff;
+   color: #7f8c8d;
+}
+@media screen and (max-width:768px) {
+    .product-details{
+   padding: 50px 20px;
+   background-color: #fff;
+   color: #7f8c8d;
+}
+}
