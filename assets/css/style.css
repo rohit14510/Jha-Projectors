@@ -1617,3 +1617,60 @@ h2{
    color: #7f8c8d;
 }
 }
+
+ /* ////////////service page////////////       */
+    .services-sidebar {
+            background: white;
+            border-radius: 20px;
+            padding: 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            height: fit-content;
+        }
+        
+        .services-header {
+            background-color: #a3cc39;
+            color: white;
+            padding: 24px;
+            border-radius: 20px 20px 0 0;
+            font-size: 22px;
+            font-weight: 600;
+            margin: 0;
+        }
+        
+        .service-item {
+            padding: 20px 24px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .service-item:last-child {
+            border-bottom: none;
+            border-radius: 0 0 20px 20px;
+        }
+        
+        .service-item:hover {
+            background-color: #f8f9fa;
+            padding-left: 30px;
+        }
+        
+        .service-item span {
+            color: #6c757d;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        
+        .service-arrow {
+            color: #6c757d;
+            font-size: 14px;
+            transition: transform 0.3s ease;
+        }
+        
+        .service-item:hover .service-arrow {
+            transform: translateX(5px);
+        }
+
+   
